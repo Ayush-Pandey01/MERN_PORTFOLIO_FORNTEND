@@ -7,8 +7,8 @@ function Intro() {
   const { welcomeText, fristName, lastName, caption, description,ImgUrl,CVURL } = intro
   
   return (
-    <div className='lg:h-[80vh] sm:h-[130vh]  flex  items-start justify-center sm:flex-col-reverse  overflow-hidden gap-2'>
-      <div className='flex flex-col items-start justify-center gap-8'>
+    <div className='lg:h-[80vh] sm:h-[90vh]  flex  items-start sm:items-center justify-center sm:flex-col-reverse  overflow-hidden gap-2'>
+      <div className='flex flex-col items-start justify-center gap-8 sm:gap-3 sm:mt-4'>
         <h1 className='text-white'>{welcomeText || ''}</h1>
         <h1 className='text-7xl sm:text-3xl   text-secondary font-semibold'>{fristName || ''} {lastName || ''}</h1>
         <h1 className='text-6xl sm:text-3xl  text-white font-semibold'>{caption || ''}</h1>
@@ -17,7 +17,7 @@ function Intro() {
         <a href={CVURL} target='_blanck' rel="noreferrer" className='border-2 border-tertiary text-tertiary rounded px-10 py-3'>View My CV</a>
       </div>
 
-      <div className='overflow-hidden Image h-[80vh] sm:h-[50vh]  sm:w-[100%]  ' >
+      <div className='overflow-hidden Image h-[80vh] sm:h-[50vh]  sm:w-[90%]  ' >
         <img className='border-4 border-secondary  sm:w-full sm:max-h-[500px] lg:max-h-[1000px]' src={ImgUrl} alt='Some Error Occured' />
       </div>
     </div>

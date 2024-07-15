@@ -14,7 +14,7 @@ function About() {
         <div className='h-[70vh] w-1/2 sm:w-full'>
         <lottie-player src={lottieURL} background="transparent" speed="1" loop  autoplay direction="1" mode="normal"></lottie-player>
         </div>
-        <div className='flex flex-col gap-5 text-white w-1/2 sm:w-full sm:m-2'>
+        <div className='flex flex-col gap-5 text-white w-1/2 sm:w-full sm:m-2 sm:px-2'>
           <p>{description1 || ''}   </p>
           <p>{description2 || ''}   </p>
         </div>

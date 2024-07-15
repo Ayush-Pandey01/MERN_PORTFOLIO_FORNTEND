@@ -17,7 +17,7 @@ function Admin() {
     },[])
 
   return (
-    <div>
+    <div className='mb-3'>
         <Header/>
         <div className='flex justify-between items-center'>
         <h1 className='text-2xl font-bold lg:ms-10 sm:ms-4 mt-5 hover:underline hover:text-secondary cursor-pointer' onClick={()=>{
