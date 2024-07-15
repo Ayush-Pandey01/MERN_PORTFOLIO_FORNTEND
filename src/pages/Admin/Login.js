@@ -16,8 +16,8 @@ function Login() {
   const Login=async()=>{
     try {
       dispatch(ShowLoading())
-      console.log("Hitting Api Request")
-      const response = await axios.post("/api/portfolio/admin-login",user);
+      
+      const response = await axios.post("https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/admin-login",user);
       console.log(response)
       if(response.data.success){
         dispatch(HideLoading())

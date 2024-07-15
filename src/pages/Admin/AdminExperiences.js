@@ -18,13 +18,13 @@ function AdminExpiriences() {
       dispatch(ShowLoading())
       let response 
       if(selectItemForEdit){
-        response = await axios.post("/api/portfolio/update-experience",{
+        response = await axios.post("https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/update-experience",{
           ...values,
           _id:selectItemForEdit._id,
         })
         
       }else{
-        response= await axios.post('/api/portfolio/add-experience',
+        response= await axios.post('https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/add-experience',
         {
           ...values,
           
@@ -54,7 +54,7 @@ function AdminExpiriences() {
 
   const onDelete = async (Item)=>{
     try {
-      const response = await axios.post('/api/portfolio//delete-experience',{
+      const response = await axios.post('https://mern-portfolio-backend-unnf.onrender.com/api/portfolio//delete-experience',{
         _id:Item._id,
       });
       dispatch(HideLoading());

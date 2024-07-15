@@ -18,13 +18,13 @@ function AdminProjects() {
       dispatch(ShowLoading())
       let response 
       if(selectItemForEdit){
-        response = await axios.post("/api/portfolio/update-project",{
+        response = await axios.post("https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/update-project",{
           ...values,
           _id:selectItemForEdit._id,
         })
         
       }else{
-        response= await axios.post('/api/portfolio/add-project',
+        response= await axios.post('https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/add-project',
         {
           ...values,
           
@@ -54,7 +54,7 @@ function AdminProjects() {
 
   const onDelete = async (Item)=>{
     try {
-      const response = await axios.post('/api/portfolio//delete-project',{
+      const response = await axios.post('https://mern-portfolio-backend-unnf.onrender.com/api/portfolio//delete-project',{
         _id:Item._id,
       });
       dispatch(HideLoading());
