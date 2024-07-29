@@ -11,12 +11,13 @@ import Login from './pages/Admin/Login.js';
 
 function App() {
   
- const {loading , portfolioData,ReloadData} = useSelector((state)=>state.root);
+ const {loading , portfolioData,reloadData} = useSelector((state)=>state.root);
   const dispatch = useDispatch();
    const getPortfolioData = async () =>{
     try {
       dispatch(ShowLoading())
       const response = await axios.get("https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/get-portfolio-data");
+      console.log(response)
       dispatch(SetPortfolioData(response.data))
       dispatch(ReloadData(false))
       dispatch(HideLoading())
@@ -34,10 +35,10 @@ function App() {
 
 
    useEffect(()=>{
-    if(ReloadData){
+    if(reloadData){
       getPortfolioData();
     }
-   },[ReloadData])
+   },[reloadData])
    
 
 
