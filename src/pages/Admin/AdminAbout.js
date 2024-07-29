@@ -10,8 +10,7 @@ function AdminAbout() {
     const { portfolioData } = useSelector((state) => state.root);
     const onFinish = async (values) => {
         try{
-          const tempSkills=values.skills.split(",")
-          values.skills=tempSkills;
+         
         dispatch(ShowLoading())
         const response = await axios.post('https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/update-about',
             {
@@ -35,7 +34,7 @@ function AdminAbout() {
     <div>
     <Form onFinish={onFinish} layout='vertical' initialValues={{
       ...portfolioData.about,
-      skills:portfolioData.about.skills.join(" , ")
+     
       }}>
         <Form.Item name="lottieURL" label="lottieURL">
             <input placeholder='lottieURL' />
@@ -47,9 +46,7 @@ function AdminAbout() {
         <Form.Item name="description2" label="Description2">
             <textarea placeholder='Description2' className='resize-none sm:height-[110px]'/>
         </Form.Item>
-        <Form.Item name="skills" label="Skills">
-            <textarea placeholder='skills' className='resize-none sm:height-[110px]'/>
-        </Form.Item>
+        
         <div className='flex justify-end w-[95%]'>
             <button className='px-5 py-2 bg-primary text-white' type='submit'>
                 Save
