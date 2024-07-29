@@ -6,6 +6,7 @@ import AdminAbout from './AdminAbout.js';
 import { useSelector } from 'react-redux';
 import AdminExperiences from './AdminExperiences.js';
 import AdminProjects from './AdminProjects.js';
+import AdminSkills from './AdminSkills.js';
 
 function Admin() {
     const {portfolioData} = useSelector((state)=>state.root);
@@ -40,10 +41,13 @@ function Admin() {
                 <items tab="About" key='2'>
                     <AdminAbout />
                 </items>
-                <items tab="Experiences" key='3'>
+                <items tab="Skills" key='3'>
+                    <AdminSkills />
+                </items>
+                <items tab="Experiences" key='4'>
                     <AdminExperiences />
                 </items>
-                <items tab="Projects" key='4'>
+                <items tab="Projects" key='5'>
                     <AdminProjects/>
                 </items>
                 
