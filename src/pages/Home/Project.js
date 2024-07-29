@@ -89,7 +89,7 @@ function Project() {
                     <div className="flex flex-col gap-5 sm:px-2 box-border sm:w-[90vw]">
                         <div className="flex justify-evenly sm:flex-col  items-center gap-3">
                             <a
-                                href={projects[selectedItemIndex].github}
+                                href={projects[selectedItemIndex].gitHubLink}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="cursor-pointer bg-secondary text-white rounded px-6 py-2 border border-secondary transition-colors duration-300 hover:bg-transparent hover:text-secondary"
@@ -97,7 +97,7 @@ function Project() {
                                 GitHub Code
                             </a>
                             <a
-                                href={projects[selectedItemIndex].livePreview}
+                                href={projects[selectedItemIndex].previewLink}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="cursor-pointer bg-secondary text-white rounded px-6 py-2 border border-secondary transition-colors duration-300 hover:bg-transparent hover:text-secondary"
