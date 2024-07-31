@@ -17,7 +17,6 @@ function App() {
     try {
       dispatch(ShowLoading())
       const response = await axios.get("https://mern-portfolio-backend-unnf.onrender.com/api/portfolio/get-portfolio-data");
-      console.log(response)
       dispatch(SetPortfolioData(response.data))
       dispatch(ReloadData(false))
       dispatch(HideLoading())

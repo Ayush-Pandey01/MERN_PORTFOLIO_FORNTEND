@@ -9,9 +9,9 @@ function Intro() {
   return (
  
 <div className="flex items-center justify-center min-h-[85vh]  text-white">
-            <div className="flex sm:flex-col-reverse sm:gap-6 flex-row items-center justify-evenly w-full">
+            <div className="flex sm:flex-col-reverse sm:gap-10  flex-row items-center justify-evenly w-full">
                 {/* Text Section */}
-                <div className="text-center lg:text-left lg:ml-6 lg:mt-0 flex-1 animate-slideInLeft">
+                <div className="text-center lg:text-left lg:ml-6 lg:mt-0  flex-1 animate-slideInLeft">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                         Welcome to My Portfolio
                     </h1>
@@ -21,7 +21,7 @@ function Intro() {
                     <p className="text-base sm:text-lg lg:text-xl mb-4">
                        {caption}
                     </p>
-                    <p className="text-base sm:text-lg lg:text-xl mb-4">
+                    <p className="text-base sm:text-lg lg:text-xl gap-1">
                        {description}
                     </p>
                     <a href={CVURL}  target='_blank' className="px-6 py-4 text-sm sm:text-base bg-white text-blue-500 rounded hover:bg-gray-200 transition-colors duration-300">
@@ -30,7 +30,7 @@ function Intro() {
                 </div>
 
                 {/* Image Section */}
-                <div className=" lg:me-5 flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 lg:w-72 lg:h-72 rounded-full overflow-hidden animate-slideInRight">
+                <div className=" lg:me-5 flex-shrink-0 w-32 h-32 sm:w-56 sm:h-56 lg:w-80 lg:h-80 rounded-full overflow-hidden animate-slideInRight">
                     <img
                         src={ImgUrl}
                         alt="Your Name"

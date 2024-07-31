@@ -18,9 +18,9 @@ function Home() {
       {portfolioData &&    <div className=' bg-gray-900 text-black lg:ps-20 sm:p-2 '>
         <Intro/>
         <About/>
-        <Experiences/>
         <Project/>
         <Education/>
+        <Experiences/>
         <ContactUs/>
         <Footer/>
         <LeftSider/>
